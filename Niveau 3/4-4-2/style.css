@@ -1,0 +1,65 @@
+#game {
+	background-size: cover;
+	width: 1000px;
+	height: 630px;
+	border: 5px solid black;
+}
+
+
+.videos_astuces {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+	border-radius: 5px;
+
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+.videos_astuces .content_box {
+	height: 0px;
+	overflow: hidden;
+	transition: height 1s;
+	-moz-transition: height 1s;
+	-webkit-transition: height 1s;
+	-o-transition: height 1s;
+}
+
+.checkbox {
+	position: absolute;
+	left: 35%;
+	height: 100%;
+}
+
+.videos_astuces:hover .content_box,
+.videos_astuces .content_box:hover,
+.videos_astuces input[type=checkbox]:checked+span+.content_box {
+	height: 506px;
+}
+
+input[type=checkbox]:checked+.txt {
+	position: absolute;
+	color: green;
+}
+
+input[type=checkbox]:checked.checkbox {
+	position: absolute;
+	left: 35%;
+	height: 100%;
+	
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait){
+	#game {
+		transform: rotate(90deg);
+	}
+	.videos_astuces{
+		align-content: space-between;
+		align-items: stretch;
+	}
+	.maillot{
+		transform: rotate(-90deg);
+	}
+}
